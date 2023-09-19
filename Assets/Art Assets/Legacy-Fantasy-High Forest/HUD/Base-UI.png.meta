@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 208
+        y: 224
         width: 80
-        height: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -744,9 +744,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 148
+        y: 163
         width: 11
-        height: 26
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1248,9 +1248,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 84
+        y: 101
         width: 4
-        height: 24
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1585,7 +1585,7 @@ TextureImporter:
         serializedVersion: 2
         x: 261
         y: 3
-        width: 20
+        width: 6
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1606,7 +1606,7 @@ TextureImporter:
         serializedVersion: 2
         x: 294
         y: 4
-        width: 19
+        width: 4
         height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1627,7 +1627,7 @@ TextureImporter:
         serializedVersion: 2
         x: 326
         y: 4
-        width: 19
+        width: 4
         height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1648,7 +1648,7 @@ TextureImporter:
         serializedVersion: 2
         x: 358
         y: 4
-        width: 19
+        width: 4
         height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1894,6 +1894,237 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Base-UI_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 148
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6edd28e85ad0c3459248521b09d73f8
+      internalID: -551628445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 84
+        width: 2
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c610a945ff7c96d418bb10fcccf06411
+      internalID: -749155934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_14
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 4
+        width: 2
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4831188425bca843829d3bbe693f302
+      internalID: -1458695503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_29
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 4
+        width: 2
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee8511b1b4597e479bc7d5285fcbeed
+      internalID: -265452590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_65
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 4
+        width: 2
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcbe82835c349d45afae2c4c17c7319
+      internalID: 1756105163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_84
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 4
+        width: 2
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f424254944ef98241b8af3ea35756062
+      internalID: -865832847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_85
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 212
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692680c10949f4c43aec3878a9cfb4db
+      internalID: 1919952139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_86
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 212
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1be8d37781a234ea85c79d7348ae67
+      internalID: 1170689775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_87
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ce832f78afdcb41955e8b523457cab
+      internalID: -654987634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_88
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2ac98bdafa2f94a82cab5dc9fd783a
+      internalID: -2135379873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base-UI_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab483374c3c57341afbea48e3a92160
+      internalID: 1032874471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1906,10 +2137,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Base-UI_0: 225165643
+      Base-UI_1: -551628445
       Base-UI_10: -148276879
       Base-UI_11: -588609648
       Base-UI_12: -774167174
       Base-UI_13: 1857090702
+      Base-UI_14: -1458695503
       Base-UI_15: 1228240402
       Base-UI_16: -128745739
       Base-UI_17: -193017236
@@ -1925,6 +2158,7 @@ TextureImporter:
       Base-UI_26: 1715583691
       Base-UI_27: 900814226
       Base-UI_28: 1967021791
+      Base-UI_29: -265452590
       Base-UI_3: 745026283
       Base-UI_30: 848078817
       Base-UI_31: 1664155092
@@ -1964,10 +2198,12 @@ TextureImporter:
       Base-UI_62: 106617594
       Base-UI_63: -283694705
       Base-UI_64: -65390429
+      Base-UI_65: 1756105163
       Base-UI_66: -46490982
       Base-UI_67: 1455639323
       Base-UI_68: -1255961886
       Base-UI_69: 1768677758
+      Base-UI_7: -749155934
       Base-UI_70: -1315160361
       Base-UI_71: 279692921
       Base-UI_72: 62896571
@@ -1983,6 +2219,12 @@ TextureImporter:
       Base-UI_81: 1518840820
       Base-UI_82: 705982654
       Base-UI_83: 116849271
+      Base-UI_84: -865832847
+      Base-UI_85: 1919952139
+      Base-UI_86: 1170689775
+      Base-UI_87: -654987634
+      Base-UI_88: -2135379873
+      Base-UI_89: 1032874471
       Base-UI_9: -724381361
       Base-UI_Avatar: -1184980919
       Base-UI_Health: -337388209
