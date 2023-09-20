@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class SnailPatrolState : BaseState
 {
     public override void OnEnter(Enemy enemy)

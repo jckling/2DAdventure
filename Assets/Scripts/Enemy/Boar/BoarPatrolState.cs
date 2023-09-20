@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class BoarPatrolState : BaseState
 {
     public override void OnEnter(Enemy enemy)

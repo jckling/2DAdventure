@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour, ISaveable
 {
     public float maxHealth;
     public float currentHealth;
@@ -17,11 +17,32 @@ public class Character : MonoBehaviour
     public UnityEvent OnDie;
     public UnityEvent<Character> onHealthChange;
 
-    private void Start()
+    public VoidEventSO newGameEvent;
+
+    private void NewGame()
     {
         currentHealth = maxHealth;
         currentPower = maxPower;
         onHealthChange?.Invoke(this);
+    }
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
+    private void OnEnable()
+    {
+        newGameEvent.OnEventRaised += NewGame;
+        ISaveable saveable = this;
+        saveable.RegisterSaveData();
+    }
+
+    private void OnDisable()
+    {
+        newGameEvent.OnEventRaised -= NewGame;
+        ISaveable saveable = this;
+        saveable.UnRegisterSaveData();
     }
 
     private void Update()
@@ -81,6 +102,40 @@ public class Character : MonoBehaviour
     public void OnSlide(int cost)
     {
         currentPower -= cost;
+        onHealthChange?.Invoke(this);
+    }
+
+    public DataDefination GetDataID()
+    {
+        return GetComponent<DataDefination>();
+    }
+
+    public void GetSaveData(Data data)
+    {
+        var id = GetDataID().ID;
+        data.characterPosDict[id] = new SerializeVector3(transform.position);
+        data.floatSaveData[id + "health"] = currentHealth;
+        data.floatSaveData[id + "power"] = currentPower;
+    }
+
+    public void LoadData(Data data)
+    {
+        var id = GetDataID().ID;
+        if (data.characterPosDict.TryGetValue(id, out var position))
+        {
+            transform.position = position.ToVector3();
+        }
+
+        if (data.floatSaveData.TryGetValue(id + "health", out var health))
+        {
+            currentHealth = health;
+        }
+
+        if (data.floatSaveData.TryGetValue(id + "power", out var power))
+        {
+            currentPower = power;
+        }
+
         onHealthChange?.Invoke(this);
     }
 }

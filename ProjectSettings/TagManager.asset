@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bounds
   - Water
+  - Interactive
   layers:
   - Default
   - TransparentFX

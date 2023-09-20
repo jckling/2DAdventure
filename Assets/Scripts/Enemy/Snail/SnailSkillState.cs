@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class SnailSkillState : BaseState
 {
     public override void OnEnter(Enemy enemy)

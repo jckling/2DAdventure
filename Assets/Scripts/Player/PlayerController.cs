@@ -4,6 +4,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public SceneLoadEventSO sceneLoadEventSo;
+    public VoidEventSO afterSceneLoadedEvent;
+    public VoidEventSO loadGameEventSo;
+    public VoidEventSO backToMenuEventSo;
+
     public PlayerInputControl inputControl;
     public Vector2 inputDirection;
 
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviour
         originalSize = coll.size;
 
         inputControl = new PlayerInputControl();
+        inputControl.Enable();
 
         // 跳跃
         inputControl.Gameplay.Jump.started += Jump;
@@ -73,12 +79,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        inputControl.Enable();
+        sceneLoadEventSo.LoadRequestEvent += OnLoadRequestEvent;
+        afterSceneLoadedEvent.OnEventRaised += OnAfterSceneLoadedEvent;
+        loadGameEventSo.OnEventRaised += OnLoadGameEvent;
+        backToMenuEventSo.OnEventRaised += OnLoadGameEvent;
     }
 
     private void OnDisable()
     {
         inputControl.Disable();
+        sceneLoadEventSo.LoadRequestEvent -= OnLoadRequestEvent;
+        afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoadedEvent;
+        loadGameEventSo.OnEventRaised -= OnLoadGameEvent;
+        backToMenuEventSo.OnEventRaised -= OnLoadGameEvent;
     }
 
     private void Update()
@@ -90,6 +103,21 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isHurt && !isAttack) Move();
+    }
+
+    private void OnLoadRequestEvent(GameSceneSO sceneToGo, Vector3 posToGo, bool fade)
+    {
+        inputControl.Gameplay.Disable();
+    }
+
+    private void OnLoadGameEvent()
+    {
+        isDead = false;
+    }
+
+    private void OnAfterSceneLoadedEvent()
+    {
+        inputControl.Gameplay.Enable();
     }
 
     private void Move()
@@ -131,6 +159,7 @@ public class PlayerController : MonoBehaviour
     {
         if (physicsCheck.isGround)
         {
+            GetComponent<AudioDefination>()?.PlayAudioClip();
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
 
             // 打断滑铲
@@ -139,6 +168,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (physicsCheck.onWall)
         {
+            GetComponent<AudioDefination>()?.PlayAudioClip();
             rb.AddForce(new Vector2(-inputDirection.x, 2f) * wallJumpForce, ForceMode2D.Impulse);
             wallJump = true;
         }
